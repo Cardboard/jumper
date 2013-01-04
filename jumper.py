@@ -259,7 +259,19 @@ areas={'area1':
         'xx_______x',
         'xxx______x',
         'xxxx_____x',
+        'xxxxxxxxxx'],'area4':
+        ['xxxxxxxxxx',
+        'x_________',
+        'x______xxx',
+        'xxxx_..__x',
+        '__x__=___x',
+        'x_x__xxx_x',
+        'x_xx_____x',
+        'x_x__=__xx',
+        'x______xxx',
         'xxxxxxxxxx']}
+	
+
 
 area = 1
 generateBlocks(areas['area' + str(area)])
@@ -291,6 +303,7 @@ while pygame.event != pygame.QUIT:
         screen.blit(level.image,level.rect)
         area += 1
         blocks = []
+        moveplats = []
         generateBlocks(areas['area' + str(area)])
         print('area' + str(area))
     if game.areaCheck(platforms, moveplats) == 2:
@@ -298,6 +311,7 @@ while pygame.event != pygame.QUIT:
         screen.blit(level.image,level.rect)
         area -= 1
         blocks = []
+        moveplats = []
         generateBlocks(areas['area' + str(area)])
         print('area' + str(area))
         
